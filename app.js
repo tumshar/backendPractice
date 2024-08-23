@@ -1,7 +1,9 @@
-require('./demo.js'); // this file will run first, calling another file
+require('./demo.js'); // this file will run first, calling another file , .js extension is optional
 require('./sum.js'); // here we expected that the function will get executed but it will not.
-const obj=require('./sum.js'); // this will execute the function
+//const obj=require('./sum.js'); // object is created and the function is called
 
+
+const {x, calculatesum}=require('./sum.js'); // destructuring the object and getting the values from the object
 var name="node project";
 console.log(name);
 
@@ -12,8 +14,11 @@ var a=11; var b=1;
 // console.log(global);
 // console.log(this); // this is empty object , will not give global object
 
-obj.calculatesum(a,b); // calculate
-console.log(obj.x); // var x will be printed
+// obj.calculatesum(a,b); // calculate
+//console.log(obj.x); // var x will be printed
+
+calculatesum(a,b); // calculate
+console.log(x); // var x will be printed
 
 
 
