@@ -1,2 +1,2 @@
-var x="i am batman";
-console.log(x);
+var y="i am batman";
+console.log(y);
